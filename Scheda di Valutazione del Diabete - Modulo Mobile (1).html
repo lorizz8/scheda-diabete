@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<!-- saved from url=(0121)file:///Users/macbookairlorenzo/Downloads/HTML%20-%20Scheda%20di%20Valutazione%20del%20Diabete%20-%20Modulo%20Mobile.html -->
+<html lang="it"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheda di Valutazione del Diabete - Modulo Mobile</title>
+    <style>
+:root {
+  /* Primitive Color Tokens */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+
+  /* RGB versions for opacity control */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
+
+  /* Background color tokens */
+  --color-bg-1: rgba(59, 130, 246, 0.08);
+  --color-bg-2: rgba(245, 158, 11, 0.08);
+  --color-bg-3: rgba(34, 197, 94, 0.08);
+  --color-bg-4: rgba(239, 68, 68, 0.08);
+  --color-bg-5: rgba(147, 51, 234, 0.08);
+  --color-bg-6: rgba(249, 115, 22, 0.08);
+  --color-bg-7: rgba(236, 72, 153, 0.08);
+  --color-bg-8: rgba(6, 182, 212, 0.08);
+
+  /* Semantic Color Tokens */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+
+  /* Typography */
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+
+  /* Spacing */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  /* Border Radius */
+  --radius-base: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-error: var(--color-red-400);
+    --color-success: var(--color-teal-300);
+    --color-warning: var(--color-orange-400);
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+    --color-btn-primary-text: var(--color-slate-900);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+  }
+}
+
+/* Base styles */
+html {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: var(--space-8);
+  background-color: var(--color-background);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+}
+
+h1 { font-size: var(--font-size-3xl); }
+h2 { font-size: var(--font-size-2xl); }
+h3 { font-size: var(--font-size-xl); }
+h4 { font-size: var(--font-size-lg); }
+
+p { margin: 0 0 var(--space-16) 0; }
+
+/* Header */
+.app-header {
+  text-align: center;
+  padding: var(--space-24) var(--space-16);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-teal-400));
+  color: var(--color-white);
+  margin-bottom: var(--space-20);
+  border-radius: var(--radius-lg);
+}
+
+.app-header h1 {
+  color: var(--color-white);
+  margin-bottom: var(--space-8);
+}
+
+.app-subtitle {
+  font-size: var(--font-size-base);
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Instructions */
+.instructions {
+  background: var(--color-bg-1);
+  padding: var(--space-16);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-20);
+  border-left: 4px solid var(--color-primary);
+}
+
+.instructions h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-12);
+}
+
+.instructions p {
+  margin-bottom: var(--space-8);
+  font-size: var(--font-size-sm);
+}
+
+/* Accordion Styles */
+.accordion {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-12);
+  box-shadow: var(--shadow-sm);
+}
+
+.accordion-header {
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  padding: var(--space-16);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-lg);
+  transition: all var(--duration-fast) var(--ease-standard);
+  min-height: 60px;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.accordion-header:hover {
+  background: var(--color-secondary);
+}
+
+.accordion-header.active {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+  border-color: var(--color-primary);
+}
+
+.accordion-arrow {
+  font-size: var(--font-size-xl);
+  transition: transform var(--duration-normal) var(--ease-standard);
+}
+
+.accordion-header.active .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  display: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-top: none;
+  padding: var(--space-20);
+}
+
+.accordion-content.active {
+  display: block;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: var(--space-16);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--space-8);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: var(--space-12);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  transition: border-color var(--duration-fast) var(--ease-standard);
+  min-height: 48px;
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  outline: var(--focus-outline);
+  box-shadow: var(--focus-ring);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 80px;
+}
+
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-12) center;
+  background-size: 16px;
+  padding-right: var(--space-32);
+}
+
+/* Tooltips */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
+  margin-left: var(--space-4);
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 280px;
+  background-color: var(--color-charcoal-800);
+  color: var(--color-white);
+  text-align: left;
+  border-radius: var(--radius-base);
+  padding: var(--space-12);
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -140px;
+  opacity: 0;
+  transition: opacity var(--duration-normal);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  box-shadow: var(--shadow-md);
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--color-charcoal-800) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext,
+.tooltip:focus .tooltiptext,
+.tooltip:active .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .tooltip .tooltiptext {
+    width: 250px;
+    margin-left: -125px;
+  }
+}
+
+/* Info boxes */
+.info-box {
+  background: var(--color-bg-2);
+  border: 1px solid rgba(var(--color-warning-rgb), 0.3);
+  padding: var(--space-16);
+  border-radius: var(--radius-lg);
+  margin: var(--space-16) 0;
+}
+
+.smoking-info {
+  background: var(--color-bg-4);
+  border-color: rgba(var(--color-error-rgb), 0.3);
+}
+
+.smoking-info h4 {
+  color: var(--color-error);
+  margin-bottom: var(--space-12);
+}
+
+.center-info p {
+  margin-bottom: var(--space-8);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+/* BMI Display */
+.bmi-display {
+  text-align: center;
+  padding: var(--space-20);
+  background: var(--color-bg-1);
+  border-radius: var(--radius-lg);
+  margin: var(--space-16) 0;
+}
+
+.bmi-value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-8);
+}
+
+.bmi-category {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-full);
+  display: inline-block;
+  color: var(--color-white);
+}
+
+.bmi-legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin-top: var(--space-16);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: var(--font-size-sm);
+}
+
+.color-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+}
+
+/* Risk Display */
+.risk-display {
+  text-align: center;
+  padding: var(--space-20);
+  background: var(--color-bg-4);
+  border-radius: var(--radius-lg);
+  margin: var(--space-16) 0;
+}
+
+.risk-value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-error);
+  margin-bottom: var(--space-8);
+}
+
+.risk-interpretation {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+.risk-warning {
+  background: var(--color-bg-2);
+  padding: var(--space-12);
+  border-radius: var(--radius-base);
+  margin-top: var(--space-12);
+  font-size: var(--font-size-sm);
+  color: var(--color-warning);
+  font-style: italic;
+}
+
+/* Specific advice */
+.specific-advice {
+  margin: var(--space-16) 0;
+  padding: var(--space-16);
+  background: var(--color-bg-3);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--color-success);
+}
+
+.specific-advice h4 {
+  color: var(--color-success);
+  margin-bottom: var(--space-12);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-12) var(--space-24);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+  border: none;
+  text-decoration: none;
+  min-height: 48px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn--full-width {
+  width: 100%;
+  margin: var(--space-8) 0;
+}
+
+/* Lists */
+.food-list, .exercise-list, .drug-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.food-list li, .exercise-list li, .drug-list li {
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+}
+
+.food-list li:last-child, 
+.exercise-list li:last-child, 
+.drug-list li:last-child {
+  border-bottom: none;
+}
+
+.category-title {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  margin: var(--space-16) 0 var(--space-8) 0;
+}
+
+.food-reason, .exercise-detail, .drug-effect {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-4);
+  font-style: italic;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    font-size: 12px;
+    color: black !important;
+    background: white !important;
+    padding: 0;
+  }
+  
+  .accordion-header {
+    background: #f0f0f0 !important;
+    color: black !important;
+    border: 1px solid #ccc !important;
+  }
+  
+  .accordion-content {
+    display: block !important;
+    background: white !important;
+    border: 1px solid #ccc !important;
+    page-break-inside: avoid;
+  }
+  
+  .accordion-arrow {
+    display: none;
+  }
+  
+  .app-header {
+    background: #f0f0f0 !important;
+    color: black !important;
+  }
+  
+  .btn {
+    display: none !important;
+  }
+  
+  .tooltip {
+    display: none;
+  }
+  
+  .bmi-display, .risk-display, .info-box, .specific-advice {
+    background: #f9f9f9 !important;
+    color: black !important;
+  }
+}
+
+/* Responsive improvements for mobile */
+@media (max-width: 480px) {
+  body {
+    padding: var(--space-4);
+  }
+  
+  .app-header {
+    padding: var(--space-16) var(--space-12);
+  }
+  
+  .app-header h1 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .accordion-content {
+    padding: var(--space-16);
+  }
+  
+  .form-control {
+    font-size: var(--font-size-lg);
+    padding: var(--space-16);
+    min-height: 52px;
+  }
+  
+  .btn {
+    padding: var(--space-16);
+    font-size: var(--font-size-lg);
+    min-height: 52px;
+  }
+  
+  .accordion-header {
+    padding: var(--space-16) var(--space-12);
+    min-height: 64px;
+    font-size: var(--font-size-base);
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>📋 Scheda di Valutazione del Diabete</h1>
+            <p class="app-subtitle">Modulo Interattivo per Pazienti Diabetici</p>
+        </header>
+
+        <!-- Istruzioni -->
+        <div class="accordion">
+            <div class="accordion-header active" onclick="toggleAccordion(&#39;istruzioni&#39;)">
+                <span>📖 Istruzioni</span>
+                <span class="accordion-arrow">▼</span>
+            </div>
+            <div id="istruzioni" class="accordion-content active">
+                <div class="instructions">
+                    <h3>Come utilizzare questa scheda:</h3>
+                    <p><strong>1.</strong> Compilare tutti i campi obbligatori (*) nelle sezioni seguenti</p>
+                    <p><strong>2.</strong> Toccare i punti di domanda (❓) per suggerimenti sulle misurazioni</p>
+                    <p><strong>3.</strong> I calcoli BMI, LDL e Rischio Cardiovascolare si aggiornano automaticamente</p>
+                    <p><strong>4.</strong> Consultare i consigli personalizzati per alimentazione ed esercizio</p>
+                    <p><strong>5.</strong> Per esportare in PDF, usare il pulsante "Esporta PDF" in fondo alla pagina</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dati Paziente -->
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(&#39;dati-paziente&#39;)">
+                <span>👤 Dati Paziente</span>
+                <span class="accordion-arrow">▼</span>
+            </div>
+            <div id="dati-paziente" class="accordion-content">
+                <div class="form-group">
+                    <label class="form-label" for="nome">Nome *</label>
+                    <input type="text" id="nome" name="nome" class="form-control" required="">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="cognome">Cognome *</label>
+                    <input type="text" id="cognome" name="cognome" class="form-control" required="">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="data-nascita">Data di Nascita</label>
+                    <input type="date" id="data-nascita" name="data-nascita" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="medico">Medico Curante</label>
+                    <input type="text" id="medico" name="medico" class="form-control">
+                </div>
+
+                <h4>Misurazioni</h4>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="peso">
+                            Peso (kg) *
+                            <span class="tooltip" onclick="showTooltip(event)">❓
+                                <span class="tooltiptext">Misurazione al mattino a digiuno, senza vestiti, sempre sulla stessa bilancia</span>
+                            </span>
+                        </label>
+                        <input type="number" id="peso" name="peso" class="form-control" min="30" max="300" step="0.1" required="">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="altezza">Altezza (cm) *</label>
+                        <input type="number" id="altezza" name="altezza" class="form-control" min="100" max="250" required="">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="circonferenza">
+                        Circonferenza Vita (cm)
+                        <span class="tooltip" onclick="showTooltip(event)">❓
+                            <span class="tooltiptext">Metro da sarta nel punto medio tra ultima costola e cresta iliaca, alla fine di una normale espirazione</span>
+                        </span>
+                    </label>
+                    <input type="number" id="circonferenza" name="circonferenza" class="form-control" min="50" max="200">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="pressione-sistolica">
+                            Pressione Sistolica (mmHg)
+                            <span class="tooltip" onclick="showTooltip(event)">❓
+                                <span class="tooltiptext">Dopo 5 minuti di riposo, seduti con braccio all'altezza del cuore, senza parlare durante la misurazione</span>
+                            </span>
+                        </label>
+                        <input type="number" id="pressione-sistolica" name="pressione-sistolica" class="form-control" min="80" max="220">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="pressione-diastolica">Pressione Diastolica (mmHg)</label>
+                        <input type="number" id="pressione-diastolica" name="pressione-diastolica" class="form-control" min="40" max="140">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Abitudini di vita -->
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(&#39;abitudini&#39;)">
+                <span>🚭 Abitudini di vita</span>
+                <span class="accordion-arrow">▼</span>
+            </div>
+            <div id="abitudini" class="accordion-content">
+                <div class="form-group">
+                    <label class="form-label">Abitudine al Fumo</label>
+                    <select id="fumo" name="fumo" class="form-control" onchange="handleFumoChange()">
+                        <option value="">Seleziona...</option>
+                        <option value="no">No</option>
+                        <option value="si">Sì</option>
+                        <option value="ex">Ex fumatore</option>
+                    </select>
+                </div>
+
+                <!-- Box informativo centri antifumo -->
+                <div class="info-box smoking-info" id="smoking-info" style="display: none;">
+                    <h4>📞 Centri Antifumo ULSS9</h4>
+                    <div class="center-info">
+                        <p><strong>Se necessità può rivolgersi ai centri antifumo presenti a Verona in via Germania 20</strong></p>
+                        <p>📞 Tel: 045 8076211 oppure 045 8076228</p>
+                        <p>🕐 Orari: lunedì-venerdì ore 7.30-12.30 + lunedì e giovedì ore 14.30-16.30</p>
+                        <p><strong>📍 Ospedale di Marzana P.le Lambranzi 1</strong></p>
+                        <p>📞 Tel: 045 8075319</p>
+                        <p><strong>📧 Email:</strong> tabagismo@aulss9.veneto.it</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Consumo di Alcolici</label>
+                    <select id="alcol" name="alcol" class="form-control">
+                        <option value="">Seleziona...</option>
+                        <option value="no">No</option>
+                        <option value="si">Sì</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Attività Fisica</label>
+                    <select id="attivita-fisica" name="attivita-fisica" class="form-control">
+                        <option value="">Seleziona...</option>
+                        <option value="no">No</option>
+                        <option value="si">Sì</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Piedi -->
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(&#39;piedi&#39;)">
+                <span>🦶 Piedi</span>
+                <span class="accordion-arrow">▼</span>
+            </div>
+            <div id="piedi" class="accordion-content">
+                <div class="form-group">
+                    <label class="form-label">Presenza di lesioni ai piedi</label>
+                    <select id="lesioni-piedi" name="lesioni-piedi" class="form-control" onchange="handleLesioniChange()">
+                        <option value="">Seleziona...</option>
+                        <option value="no">No</option>
+                        <option value="si">Sì</option>
+                    </select>
+                </div>
+                
+                <div class="form-group" id="lesioni-details" style="display: none;">
+                    <label class="form-label" for="lesioni-descrizione">Descrizione lesioni</label>
+                    <textarea id="lesioni-descrizione" name="lesioni-descrizione" class="form-control" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Esami -->
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(&#39;esami&#39;)">
+                <span>🩺 Esami</span>
+                <span class="accordion-arrow">▼</span>
+            </div>
+            <div id="esami" class="accordion-content">
+                <h4>Esami del Sangue/Urine (ultimi 6 mesi)</h4>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="colesterolo-totale">Colesterolo Totale (mg/dl)</label>
+                        <input type="number" id="colesterolo-totale" name="colesterolo-totale" class="form-control" min="100" max="400">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="hdl">HDL (mg/dl)</label>
+                        <input type="number" id="hdl" name="hdl" class="form-control" min="20" max="100">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="trigliceridi">Trigliceridi (mg/dl)</label>
+                        <input type="number" id="trigliceridi" name="trigliceridi" class="form-control" min="50" max="500">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="ldl">LDL (mg/dl) - Calcolato automaticamente</label>
+                        <input type="number" id="ldl" name="ldl" class="form-control" readonly="">
+                        <small style="font-size: 12px; color: var(--color-text-secondary);">Formula Friedwald: LDL = Colesterolo Totale - HDL - (Trigliceridi ÷ 5)</small>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="emoglobina-glicata">Emoglobina Glicata (HbA1c) %</label>
+                    <input type="number" id="emoglobina-glicata" name="emoglobina-glicata" class="form-control" min="4" max="15" step="0.1">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="data-esami">Data Esami</label>
+                    <input type="date" id="data-esami" name="data-esami" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <!-- Rischio Cardiovascolare -->
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(&#39;rischio&#39;)">
+                <span>❤️ Rischio Cardiovascolare</span>
+                <span class="accordion-arrow">▼</span>
+            </div>
+            <div id="rischio" class="accordion-content">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="sesso">Sesso</label>
+                        <select id="sesso" name="sesso" class="form-control">
+                            <option value="">Seleziona...</option>
+                            <option value="M">Maschio</option>
+                            <option value="F">Femmina</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="eta">Età</label>
+                        <input type="number" id="eta" name="eta" class="form-control" min="30" max="100">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Terapia Antipertensiva</label>
+                    <select id="terapia-antipertensiva" name="terapia-antipertensiva" class="form-control">
+                        <option value="">Seleziona...</option>
+                        <option value="si">Sì</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <!-- BMI Display -->
+                <div class="bmi-display">
+                    <h4>Indice di Massa Corporea (BMI)</h4>
+                    <div class="bmi-value" id="bmi-value">--</div>
+                    <div class="bmi-category" id="bmi-category">Inserire peso e altezza</div>
+                    
+                    <div class="bmi-legend">
+                        <div class="legend-item">
+                            <span class="color-box" style="background: #4CAF50;"></span>
+                            <span>18.5-24.9: Normopeso</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="color-box" style="background: #FF9800;"></span>
+                            <span>25-29.9: Sovrappeso</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="color-box" style="background: #F44336;"></span>
+                            <span>≥30: Obesità</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risk Display -->
+                <div class="risk-display">
+                    <h4>Rischio Cardiovascolare a 10 anni</h4>
+                    <div class="risk-value" id="risk-value">--</div>
+                    <div class="risk-interpretation" id="risk-interpretation">Inserire i dati per calcolo automatico</div>
+                    <div class="risk-warning">
+                        ⚠️ Questa è una stima indicativa basata su parametri semplificati. Per una valutazione accurata consultare il proprio medico.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alimentazione -->
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(&#39;alimentazione&#39;)">
+                <span>🍎 Alimentazione</span>
+                <span class="accordion-arrow">▼</span>
+            </div>
+            <div id="alimentazione" class="accordion-content">
+                <div class="form-group">
+                    <label class="form-label" for="comorbidita-alimentazione">Altre patologie</label>
+                    <select id="comorbidita-alimentazione" class="form-control" onchange="updateAlimentazioneAdvice()">
+                        <option value="">Nessuna</option>
+                        <option value="scompenso">Scompenso cardiaco</option>
+                        <option value="renale">Insufficienza renale</option>
+                        <option value="osteo">Osteoporosi</option>
+                        <option value="artrosi">Artrosi</option>
+                    </select>
+                </div>
+
+                <div id="consigli-alimentazione-specifici" class="specific-advice" style="display: none;"></div>
+
+                <div class="category-title">🚫 Alimenti da Limitare/Evitare</div>
+                <ul class="food-list">
+                    <li>Zuccheri semplici (zucchero, miele, dolci)
+                        <div class="food-reason">Causano picchi glicemici rapidi</div>
+                    </li>
+                    <li>Carboidrati raffinati (pane bianco, pasta raffinata)
+                        <div class="food-reason">Alto indice glicemico</div>
+                    </li>
+                    <li>Bevande zuccherate e alcolici
+                        <div class="food-reason">Calorie vuote, alterano la glicemia</div>
+                    </li>
+                    <li>Grassi saturi (insaccati, formaggi grassi, fritture)
+                        <div class="food-reason">Peggiorano resistenza insulinica</div>
+                    </li>
+                </ul>
+
+                <div class="category-title">✅ Alimenti Consigliati</div>
+                <ul class="food-list">
+                    <li>Verdure a foglia verde (spinaci, broccoli, zucchine)
+                        <div class="food-reason">Ricche di fibre, basso indice glicemico</div>
+                    </li>
+                    <li>Proteine magre (pesce, pollo, legumi)
+                        <div class="food-reason">Non influenzano la glicemia</div>
+                    </li>
+                    <li>Cereali integrali (pasta integrale, riso basmati)
+                        <div class="food-reason">Rilascio graduale del glucosio</div>
+                    </li>
+                    <li>Grassi sani (olio d'oliva, noci, avocado)
+                        <div class="food-reason">Migliorano sensibilità insulinica</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Esercizio Fisico -->
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(&#39;esercizio&#39;)">
+                <span>💪 Esercizio Fisico</span>
+                <span class="accordion-arrow">▼</span>
+            </div>
+            <div id="esercizio" class="accordion-content">
+                <div class="form-group">
+                    <label class="form-label" for="comorbidita-esercizio">Altre patologie</label>
+                    <select id="comorbidita-esercizio" class="form-control" onchange="updateEsercizioAdvice()">
+                        <option value="">Nessuna</option>
+                        <option value="scompenso">Scompenso cardiaco</option>
+                        <option value="renale">Insufficienza renale</option>
+                        <option value="osteo">Osteoporosi</option>
+                        <option value="artrosi">Artrosi</option>
+                    </select>
+                </div>
+
+                <div id="consigli-esercizio-specifici" class="specific-advice" style="display: none;"></div>
+
+                <div class="info-box" style="background: var(--color-bg-3); border-color: rgba(var(--color-success-rgb), 0.3);">
+                    <h4>📋 Raccomandazioni OMS</h4>
+                    <p>Almeno <strong>150 minuti a settimana</strong> di attività aerobica a intensità moderata, distribuiti in almeno 3 giorni.</p>
+                </div>
+
+                <div class="category-title">🏃‍♂️ Attività Consigliate</div>
+                <ul class="exercise-list">
+                    <li>Camminata veloce - 30-45 min, 5 giorni/settimana
+                        <div class="exercise-detail">Intensità moderata, facile da praticare ovunque</div>
+                    </li>
+                    <li>Nuoto - 30-45 min, 2-3 giorni/settimana
+                        <div class="exercise-detail">Basso impatto sulle articolazioni</div>
+                    </li>
+                    <li>Cyclette - 30-60 min, 3-4 giorni/settimana
+                        <div class="exercise-detail">Controllabile intensità e durata</div>
+                    </li>
+                    <li>Esercizi di resistenza - 20-30 min, 2-3 giorni/settimana
+                        <div class="exercise-detail">Migliorano sensibilità insulinica</div>
+                    </li>
+                </ul>
+
+                <div class="info-box" style="background: var(--color-bg-2); border-color: rgba(var(--color-warning-rgb), 0.3);">
+                    <h4>💡 Consigli Pratici</h4>
+                    <ul style="margin: 8px 0 0 16px; font-size: 14px;">
+                        <li>Controlla glicemia prima e dopo l'esercizio</li>
+                        <li>Tieni sempre con te zucchero o snack</li>
+                        <li>Indossa scarpe appropriate</li>
+                        <li>Idratati adeguatamente</li>
+                        <li>Inizia gradualmente se non sei abituato</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Farmaci -->
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(&#39;farmaci&#39;)">
+                <span>💊 Farmaci</span>
+                <span class="accordion-arrow">▼</span>
+            </div>
+            <div id="farmaci" class="accordion-content">
+                <div class="info-box" style="background: var(--color-bg-4); border-color: rgba(var(--color-error-rgb), 0.3);">
+                    <p><strong>⚠️ Attenzione:</strong> Non interrompere mai i farmaci prescritti senza consultare il medico. Questa lista è informativa.</p>
+                </div>
+
+                <div class="category-title">⚠️ Farmaci che Possono Peggiorare il Diabete</div>
+                
+                <h5 style="color: var(--color-warning); margin: 16px 0 8px 0;">Corticosteroidi</h5>
+                <ul class="drug-list">
+                    <li>Prednisone, Cortisone, Spray nasali cortisonici
+                        <div class="drug-effect">Aumentano resistenza insulinica</div>
+                    </li>
+                </ul>
+
+                <h5 style="color: var(--color-warning); margin: 16px 0 8px 0;">Farmaci Cardiovascolari</h5>
+                <ul class="drug-list">
+                    <li>Beta-bloccanti, Diuretici tiazidici
+                        <div class="drug-effect">Possono alterare la glicemia</div>
+                    </li>
+                </ul>
+
+                <h5 style="color: var(--color-warning); margin: 16px 0 8px 0;">Farmaci Psichiatrici</h5>
+                <ul class="drug-list">
+                    <li>Antipsicotici, Alcuni antidepressivi
+                        <div class="drug-effect">Aumento peso e resistenza insulinica</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Esporta PDF -->
+        <div class="accordion">
+            <div class="accordion-header active" onclick="toggleAccordion(&#39;esporta&#39;)">
+                <span>📄 Esporta PDF</span>
+                <span class="accordion-arrow">▼</span>
+            </div>
+            <div id="esporta" class="accordion-content active">
+                <div class="info-box">
+                    <h4>📝 Esportazione in PDF</h4>
+                    <p>Premere il pulsante qui sotto per aprire la finestra di stampa. Selezionare "Salva come PDF" per ottenere una copia digitale della scheda compilata.</p>
+                </div>
+                
+                <button type="button" class="btn btn--primary btn--full-width" onclick="window.print()">
+                    🖨️ Esporta PDF
+                </button>
+                
+                <button type="button" class="btn btn--primary btn--full-width" onclick="resetAll()">
+                    🔄 Nuova Scheda
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Application data and global variables
+        const appData = {
+            tips: {
+                peso: "Misurazione al mattino a digiuno, senza vestiti, sempre sulla stessa bilancia",
+                pa: "Dopo 5 minuti di riposo, seduti con braccio all'altezza del cuore, senza parlare durante la misurazione", 
+                circo: "Metro da sarta nel punto medio tra ultima costola e cresta iliaca, alla fine di una normale espirazione"
+            },
+            comorbidity: {
+                alimentazione: {
+                    scompenso: "Limitare sodio <5g/die, controllare liquidi, dieta ipolipidica",
+                    renale: "Ridurre proteine 0.6-0.8g/kg, limitare fosforo e potassio",
+                    osteo: "Aumentare calcio (1200mg/die), vitamina D, limitare caffeina", 
+                    artrosi: "Dieta antinfiammatoria ricca di omega-3, limitare carne rossa"
+                },
+                esercizio: {
+                    scompenso: "150 min/settimana attività moderata, camminata 20-30 min per 3-5 volte/settimana",
+                    renale: "Attività aerobica moderata, evitare sport da contatto",
+                    osteo: "Esercizi di rinforzo muscolare e resistenza, evitare movimenti bruschi",
+                    artrosi: "Nuoto, cyclette, esercizi di mobilità, evitare salti e corsa"
+                }
+            },
+            ulss9: {
+                info: "Se necessità può rivolgersi ai centri antifumo presenti a Verona in via Germania 20 (Tel 045 8076211 oppure 045 8076228 lunedi-venerdi ore 7.30-12.30 + lunedi e giovedi ore 14.30-16.30) e all'Ospedale di Marzana P.le Lambranzi 1 (tel. 045 8075319). E mail: tabagismo@aulss9.veneto.it"
+            }
+        };
+
+        let currentPatientData = {};
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            setupEventListeners();
+        });
+
+        // Setup event listeners for all inputs
+        function setupEventListeners() {
+            const inputs = document.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('input', handleFormChange);
+                input.addEventListener('change', handleFormChange);
+            });
+        }
+
+        // Handle form changes
+        function handleFormChange(event) {
+            const { name, value, id } = event.target;
+            const fieldName = name || id;
+            currentPatientData[fieldName] = value;
+            
+            // Update calculations
+            updateBMI();
+            updateLDL();
+            updateRiskCalculation();
+        }
+
+        // Toggle accordion sections
+        function toggleAccordion(sectionId) {
+            const content = document.getElementById(sectionId);
+            const header = content.previousElementSibling;
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                header.classList.remove('active');
+            } else {
+                content.classList.add('active');
+                header.classList.add('active');
+            }
+        }
+
+        // Handle smoking info display
+        function handleFumoChange() {
+            const fumoValue = document.getElementById('fumo').value;
+            const smokingInfo = document.getElementById('smoking-info');
+            
+            if (smokingInfo) {
+                smokingInfo.style.display = fumoValue === 'si' ? 'block' : 'none';
+            }
+            
+            currentPatientData.fumo = fumoValue;
+            updateRiskCalculation();
+        }
+
+        // Handle lesioni piedi display
+        function handleLesioniChange() {
+            const lesioniValue = document.getElementById('lesioni-piedi').value;
+            const lesioniDetails = document.getElementById('lesioni-details');
+            
+            if (lesioniDetails) {
+                lesioniDetails.style.display = lesioniValue === 'si' ? 'block' : 'none';
+            }
+        }
+
+        // Show tooltip on mobile
+        function showTooltip(event) {
+            event.stopPropagation();
+            const tooltip = event.currentTarget;
+            const tooltiptext = tooltip.querySelector('.tooltiptext');
+            
+            if (tooltiptext) {
+                tooltiptext.style.visibility = 'visible';
+                tooltiptext.style.opacity = '1';
+                
+                // Hide after 3 seconds
+                setTimeout(() => {
+                    tooltiptext.style.visibility = 'hidden';
+                    tooltiptext.style.opacity = '0';
+                }, 3000);
+            }
+        }
+
+        // BMI Calculator
+        function updateBMI() {
+            const peso = parseFloat(currentPatientData.peso);
+            const altezza = parseFloat(currentPatientData.altezza);
+            
+            const bmiValueElement = document.getElementById('bmi-value');
+            const bmiCategoryElement = document.getElementById('bmi-category');
+            
+            if (!bmiValueElement || !bmiCategoryElement) return;
+            
+            if (peso && altezza && peso > 0 && altezza > 0) {
+                const altezzaMetri = altezza / 100;
+                const bmi = peso / (altezzaMetri * altezzaMetri);
+                const bmiRounded = Math.round(bmi * 10) / 10;
+                
+                bmiValueElement.textContent = bmiRounded;
+                
+                let category = '';
+                let color = '';
+                
+                if (bmiRounded < 18.5) {
+                    category = 'Sottopeso';
+                    color = '#FFA500';
+                } else if (bmiRounded < 25) {
+                    category = 'Normopeso';
+                    color = '#4CAF50';
+                } else if (bmiRounded < 30) {
+                    category = 'Sovrappeso';
+                    color = '#FF9800';
+                } else if (bmiRounded < 35) {
+                    category = 'Obesità grado I';
+                    color = '#F44336';
+                } else if (bmiRounded < 40) {
+                    category = 'Obesità grado II';
+                    color = '#D32F2F';
+                } else {
+                    category = 'Obesità grado III';
+                    color = '#B71C1C';
+                }
+                
+                bmiCategoryElement.textContent = category;
+                bmiCategoryElement.style.backgroundColor = color;
+            } else {
+                bmiValueElement.textContent = '--';
+                bmiCategoryElement.textContent = 'Inserire peso e altezza';
+                bmiCategoryElement.style.backgroundColor = '#ccc';
+            }
+        }
+
+        // LDL Calculator with Friedwald formula
+        function updateLDL() {
+            const colesteroloTotale = parseFloat(currentPatientData['colesterolo-totale']);
+            const hdl = parseFloat(currentPatientData.hdl);
+            const trigliceridi = parseFloat(currentPatientData.trigliceridi);
+            
+            const ldlInput = document.getElementById('ldl');
+            if (!ldlInput) return;
+            
+            if (colesteroloTotale && hdl && trigliceridi && trigliceridi < 400) {
+                const ldl = colesteroloTotale - hdl - (trigliceridi / 5);
+                const ldlRounded = Math.round(ldl);
+                
+                ldlInput.value = ldlRounded;
+                currentPatientData.ldl = ldlRounded;
+            } else {
+                ldlInput.value = '';
+                if (trigliceridi >= 400) {
+                    ldlInput.placeholder = 'Formula non valida per TG ≥400';
+                }
+            }
+        }
+
+        // Risk Calculator (simplified Progetto CUORE)
+        function updateRiskCalculation() {
+            const sesso = currentPatientData.sesso || '';
+            const eta = parseInt(currentPatientData.eta) || 0;
+            const fumo = currentPatientData.fumo === 'si' ? 'si' : 'no';
+            const pressioneSistolica = parseInt(currentPatientData['pressione-sistolica']) || 0;
+            const colesteroloTotale = parseInt(currentPatientData['colesterolo-totale']) || 0;
+            const hdl = parseInt(currentPatientData.hdl) || 0;
+            const terapiaAntipertensiva = currentPatientData['terapia-antipertensiva'] || '';
+            
+            const riskValue = document.getElementById('risk-value');
+            const riskInterpretation = document.getElementById('risk-interpretation');
+            
+            if (!riskValue || !riskInterpretation) return;
+            
+            if (!sesso || !eta || eta < 30) {
+                riskValue.textContent = '--';
+                riskInterpretation.textContent = 'Inserire sesso ed età (≥30) per calcolo automatico';
+                return;
+            }
+            
+            // Simplified risk calculation (stima indicativa)
+            let rischioBase = 0;
+            
+            // Age factor
+            if (eta >= 75) rischioBase += 20;
+            else if (eta >= 65) rischioBase += 15;
+            else if (eta >= 55) rischioBase += 10;
+            else if (eta >= 45) rischioBase += 5;
+            
+            // Gender factor
+            if (sesso === 'M') rischioBase += 5;
+            
+            // Diabetes (assumed yes for this form)
+            rischioBase += 15;
+            
+            // Smoking
+            if (fumo === 'si') rischioBase += 8;
+            
+            // Blood pressure
+            if (pressioneSistolica >= 180) rischioBase += 12;
+            else if (pressioneSistolica >= 160) rischioBase += 10;
+            else if (pressioneSistolica >= 140) rischioBase += 6;
+            else if (pressioneSistolica >= 130) rischioBase += 3;
+            
+            // Cholesterol
+            if (colesteroloTotale >= 280) rischioBase += 8;
+            else if (colesteroloTotale >= 240) rischioBase += 6;
+            else if (colesteroloTotale >= 200) rischioBase += 3;
+            
+            // HDL (protective factor)
+            if (hdl >= 60) rischioBase -= 3;
+            else if (hdl < 35) rischioBase += 4;
+            else if (hdl < 45) rischioBase += 2;
+            
+            // Antihypertensive therapy
+            if (terapiaAntipertensiva === 'si') rischioBase += 2;
+            
+            const rischio = Math.min(35, Math.max(1, rischioBase));
+            
+            // Display result
+            riskValue.textContent = `${rischio}%`;
+            
+            let interpretation = '';
+            let color = '';
+            if (rischio < 10) {
+                interpretation = 'Rischio cardiovascolare basso';
+                color = '#4CAF50';
+            } else if (rischio < 20) {
+                interpretation = 'Rischio cardiovascolare moderato';
+                color = '#FF9800';
+            } else {
+                interpretation = 'Rischio cardiovascolare alto';
+                color = '#F44336';
+            }
+            
+            riskInterpretation.textContent = interpretation;
+            riskValue.style.color = color;
+        }
+
+        // Update specific advice for comorbidities in alimentazione
+        function updateAlimentazioneAdvice() {
+            const condition = document.getElementById('comorbidita-alimentazione').value;
+            const container = document.getElementById('consigli-alimentazione-specifici');
+            
+            if (!condition || !container) {
+                if (container) container.style.display = 'none';
+                return;
+            }
+            
+            const advice = appData.comorbidity.alimentazione[condition];
+            if (advice) {
+                const conditionNames = {
+                    scompenso: 'Scompenso Cardiaco',
+                    renale: 'Insufficienza Renale',
+                    osteo: 'Osteoporosi', 
+                    artrosi: 'Artrosi'
+                };
+                
+                container.innerHTML = `
+                    <h4>💡 Consigli Alimentari - ${conditionNames[condition]}</h4>
+                    <p>${advice}</p>
+                `;
+                container.style.display = 'block';
+            } else {
+                container.style.display = 'none';
+            }
+        }
+
+        // Update specific advice for comorbidities in esercizio
+        function updateEsercizioAdvice() {
+            const condition = document.getElementById('comorbidita-esercizio').value;
+            const container = document.getElementById('consigli-esercizio-specifici');
+            
+            if (!condition || !container) {
+                if (container) container.style.display = 'none';
+                return;
+            }
+            
+            const advice = appData.comorbidity.esercizio[condition];
+            if (advice) {
+                const conditionNames = {
+                    scompenso: 'Scompenso Cardiaco',
+                    renale: 'Insufficienza Renale',
+                    osteo: 'Osteoporosi',
+                    artrosi: 'Artrosi'
+                };
+                
+                container.innerHTML = `
+                    <h4>💡 Consigli per l'Esercizio - ${conditionNames[condition]}</h4>
+                    <p>${advice}</p>
+                `;
+                container.style.display = 'block';
+            } else {
+                container.style.display = 'none';
+            }
+        }
+
+        // Reset all data
+        function resetAll() {
+            if (confirm('Sei sicuro di voler resettare tutti i dati? Questa azione non può essere annullata.')) {
+                // Reset all form fields
+                const inputs = document.querySelectorAll('input, select, textarea');
+                inputs.forEach(input => {
+                    if (input.type === 'checkbox' || input.type === 'radio') {
+                        input.checked = false;
+                    } else {
+                        input.value = '';
+                    }
+                });
+                
+                // Clear patient data
+                currentPatientData = {};
+                
+                // Hide conditional elements
+                document.getElementById('smoking-info').style.display = 'none';
+                document.getElementById('lesioni-details').style.display = 'none';
+                document.getElementById('consigli-alimentazione-specifici').style.display = 'none';
+                document.getElementById('consigli-esercizio-specifici').style.display = 'none';
+                
+                // Reset calculations
+                document.getElementById('bmi-value').textContent = '--';
+                document.getElementById('bmi-category').textContent = 'Inserire peso e altezza';
+                document.getElementById('bmi-category').style.backgroundColor = '#ccc';
+                document.getElementById('ldl').value = '';
+                document.getElementById('risk-value').textContent = '--';
+                document.getElementById('risk-interpretation').textContent = 'Inserire i dati per calcolo automatico';
+                
+                // Close all accordions except instructions
+                const contents = document.querySelectorAll('.accordion-content');
+                const headers = document.querySelectorAll('.accordion-header');
+                
+                contents.forEach(content => {
+                    if (content.id !== 'istruzioni') {
+                        content.classList.remove('active');
+                    }
+                });
+                
+                headers.forEach(header => {
+                    if (header.nextElementSibling.id !== 'istruzioni') {
+                        header.classList.remove('active');
+                    }
+                });
+            }
+        }
+    </script>
+
+</body></html>
