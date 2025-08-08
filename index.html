@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Dettaglio Obiettivo DIABETE</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    h1 { background: #0074a2; color: white; padding: 10px; }
+    input { margin-bottom: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th, td { border: 1px solid #aaa; padding: 6px; text-align: center; }
+    th { background: #f0f0f0; }
+    .evidenziato { background: #c9f7c1; font-weight: bold; }
+    #riepilogo { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Dettaglio Obiettivo DIABETE</h1>
+  <input type="file" id="fileInput" accept=".xml">
+  <table id="risultati">
+    <thead>
+      <tr>
+        <th>ID Assistito</th><th>Fumo</th><th>Circonferenza Add.</th><th>BMI</th><th>Att. Fis.</th>
+        <th>Num. Glicata</th><th>Val. Glicata</th><th>PAS</th><th>PAD</th>
+        <th>Colesterolo LDL</th><th>Colesterolo HDL</th><th>Colesterolo Totale</th>
+        <th>Trigliceridi</th><th>Creatininemia</th><th>Microalbuminuria</th>
+        <th>Esame Urine</th><th>Visita Oculistica</th><th>Piede</th><th>Score</th><th>In carico</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <div id="riepilogo"></div>
+
+  <script>
+  const punteggi = {
+    fumo: 10, circonferenzaaddome: 10, bmi: 10, attivitafisica: 10,
+    numerohbglicata: 2, hbglicata: 10, pas: 4, pad: 4,
+    ldl: 10, hdl: 3, colesterolototale: 3, tg: 5,
+    creatininemia: 3, microalbuminuria: 4, esameurine: 2,
+    visitaoculistica: 2, ispezionepiede: 2
+  };
+
+  document.getElementById('fileInput').addEventListener('change', e => {
+    const file = e.target.files[0]; if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      const xml = new DOMParser().parseFromString(reader.result, "text/xml");
+      const assistiti = xml.getElementsByTagName("assistito");
+
+      const tbody = document.querySelector("#risultati tbody");
+      tbody.innerHTML = "";
+      let totale = 0, inCarico = 0;
+
+      for (let a of assistiti) {
+        totale++;
+        let id = a.querySelector("identificativoassistito")?.textContent || "";
+        let score = 0;
+        let row = [id];
+
+        for (let key in punteggi) {
+          let val = 0;
+
+          if (key === "bmi") {
+            const elem = a.querySelector("bmi");
+            if (elem) {
+              const text = elem.textContent.trim();
+              if (text !== "" && text !== "00.00") {
+                val = punteggi.bmi;
+                score += val;
+              }
+            }
+            row.push(val);
+            continue;
+          }
+
+          const elem = a.querySelector(key);
+          if (elem) {
+            const presente = elem.getAttribute("presente");
+            const data = elem.getAttribute("dataultimarilevazione") || "";
+            if (presente === "true" && (data === "" || data.startsWith("2024"))) {
+              val = punteggi[key];
+              score += val;
+            }
+          }
+          row.push(val);
+        }
+
+        let inc = score >= 62 ? 1 : 0;
+        if (inc) inCarico++;
+        row.push(score, inc);
+
+        let tr = document.createElement("tr");
+        if (inc) tr.classList.add("evidenziato");
+        for (let v of row) {
+          let td = document.createElement("td");
+          td.textContent = v;
+          tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+      }
+
+      let pct = totale ? ((inCarico / totale) * 100).toFixed(2) : "0.00";
+      document.getElementById('riepilogo').textContent =
+        `Pazienti in carico (score ≥ 62): ${inCarico} su ${totale} (${pct}%)`;
+    };
+    reader.readAsText(file);
+  });
+</script>
+</body>
+</html>
